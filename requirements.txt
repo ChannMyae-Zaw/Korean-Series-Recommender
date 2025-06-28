@@ -3,7 +3,7 @@
 
 # Your dependencies
 streamlit==1.46.1
-torch==2.2.2+cpu
+torch
 numpy
 pandas
 sentence-transformers==2.2.2
