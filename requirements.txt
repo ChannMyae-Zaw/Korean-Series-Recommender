@@ -1,6 +1,6 @@
-streamlit
-torch
-numpy
-pandas
-sentence_transformers
-pickle
+streamlit==1.46.1
+torch==2.2.2+cpu
+numpy==2.3.1
+pandas==2.3.0
+sentence-transformers==2.2.2
+scikit-learn
