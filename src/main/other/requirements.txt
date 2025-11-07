@@ -1,0 +1,9 @@
+# Tell pip where to find torch CPU wheels
+-f https://download.pytorch.org/whl/torch_stable.html
+
+# Your dependencies
+streamlit==1.46.1
+torch
+numpy
+pandas
+sentence-transformers==2.2.2
