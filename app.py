@@ -10,6 +10,33 @@ from utils.recommender import compute_similarity
 # Set layout
 st.set_page_config(layout="wide")
 
+# Inject custom CSS for pink UI and blue buttons
+st.markdown("""
+<style>
+/* Main UI background to pink */
+[data-testid="stAppViewContainer"] {
+    background-color: #FFC0CB; /* Light Pink */
+}
+
+/* Button colors to blue */
+[data-testid="stButton"] > button {
+    background-color: #4682B4; /* Steel Blue */
+    color: white; /* Text color for buttons */
+    border-color: #4682B4; /* Ensure border matches */
+}
+/* Hover state for buttons */
+[data-testid="stButton"] > button:hover {
+    background-color: #5F9EA0; /* Cadet Blue, slightly lighter for hover */
+    border-color: #5F9EA0;
+}
+/* Active state for buttons */
+[data-testid="stButton"] > button:active {
+    background-color: #36709B; /* Darker blue for active */
+    border-color: #36709B;
+}
+</style>
+""", unsafe_allow_html=True)
+
 # Load data
 series = pickle.load(open('./data/cleaned_series.pkl', 'rb'))
 embeddings = np.load('./data/movie_embeddings.npy')
